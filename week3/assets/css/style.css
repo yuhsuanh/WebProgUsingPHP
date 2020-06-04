@@ -1,0 +1,20 @@
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#display_movie th {
+    width: 1rem;
+}
+
+#book_listing, #book_listing th, #book_listing td {
+    border: 1px solid #99a1ad;
+}
+
+#book_listing th {
+    background-color: #c4e6cc;
+}
+
+#tour_listing th {
+    background-color: #54a7f0;
+}
