@@ -59,7 +59,7 @@
                 <td><?php echo $trip['hotel']; ?></td>
                 <td><?php echo $trip['days']; ?></td>
                 <td><?php echo $trip['fee']; ?></td>
-                <td><a class="delete_trip btn btn-danger" href="delete-trip.php?id=<?php echo $trip['id']; ?>">Delete</a></td>
+                <td><a class="delete_trip btn btn-danger" href="delete-trip.php?trip_id=<?php echo $trip['trip_id']; ?>">Delete</a></td>
             </tr>
         <?php } ?>
         </tbody>
