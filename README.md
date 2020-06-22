@@ -13,18 +13,16 @@ Georgian College - COMP1006 Intro Web Prog Using PHP
 
 
 #Schedule of Activities
-WEEK  LESSON\<br>
-1     Introduction\<br>
-2     Saving Data\<br>
-3     Retrieving & Displaying Data on a Web Site\<br>
-4     Input Validation\<br>
-5     Update & Delete\<br>
-6     Authentication\<br>
-7     Code Re-Use\<br>
-8     Error Handling\<br>
-9     File Uploads\<br>
-10    Searching & Sorting\<br>
-11    APIs\<br>
-12    Presentation of Assignment\<br>
-
-# WebProgUsingPHP
+WEEK  LESSON  
+1     Introduction  
+2     Saving Data  
+3     Retrieving & Displaying Data on a Web Site  
+4     Input Validation  
+5     Update & Delete  
+6     Authentication  
+7     Code Re-Use  
+8     Error Handling  
+9     File Uploads  
+10    Searching & Sorting  
+11    APIs  
+12    Presentation of Assignment  
