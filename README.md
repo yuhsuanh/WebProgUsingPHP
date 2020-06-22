@@ -12,7 +12,7 @@ Georgian College - COMP1006 Intro Web Prog Using PHP
   * Weekly quizzes 50%
 
 
-#Schedule of Activities
+#Schedule of Activities  
 WEEK  LESSON  
 1     Introduction  
 2     Saving Data  
