@@ -1,0 +1,38 @@
+header {
+    margin-bottom: 1rem;
+}
+
+body {
+    margin: 1rem 3rem;
+}
+
+button.nes-btn {
+    margin: 1rem 0;
+}
+
+.fill-btn {
+    width: 100%;
+}
+
+form {
+    margin: 1rem 0;
+}
+
+.back_color {
+    background-color: antiquewhite;
+}
+.text_center {
+    text-align: center;
+}
+img {
+    max-width: 90%;
+    align-content: center;
+}
+
+h1 {
+    margin: 2rem 0;
+}
+
+.text_right {
+    text-align: right;
+}
