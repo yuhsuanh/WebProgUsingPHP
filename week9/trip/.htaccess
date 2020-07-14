@@ -1,0 +1,11 @@
+#Local MAMP server
+#ErrorDocument 404 http://localhost:8888/week9/trip/404.php
+
+
+#RewriteEngine On
+#RewriteCond %{HTTPS} off
+#RewriteRule (.*) https://%{HTTPS_HOST}%{REQUEST_URI}
+
+#Remote LAMP server
+ErrorDocument 404 http://15.222.122.223/~Yu200443723/comp1006/week9/trip/404.php
+

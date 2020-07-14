@@ -1,0 +1,78 @@
+header {
+    margin-bottom: 1rem;
+}
+
+body {
+    margin: 1rem 3rem;
+}
+
+button.nes-btn {
+    margin: 1rem 0;
+}
+
+.fill-btn {
+    width: 100%;
+}
+
+form {
+    margin: 1rem 0;
+}
+
+.back_color {
+    background-color: antiquewhite;
+}
+.text_center {
+    text-align: center;
+}
+img {
+    max-width: 90%;
+    align-content: center;
+}
+
+h1 {
+    margin: 2rem 0;
+}
+
+.text_right {
+    text-align: right;
+}
+
+footer {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.icon_title {
+    color: black !important;
+    border-style: dashed;
+    padding: 0.5rem;
+    text-decoration: none;
+}
+
+.mt-1 {
+    margin-top: 1rem;
+}
+
+
+
+.bounce {
+    animation-name: bounce;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+    25% {
+        transform: translateY(40px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+    75% {
+        transform: translateY(-40px);
+    }
+}
+
+.nes-field {
+    margin: 1rem 0;
+}
