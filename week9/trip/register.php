@@ -39,6 +39,7 @@ require ('header.php');
                     </div>
                 </div>
 
+                <input type="hidden" name="recaptchaResponse" id="recaptchaResponse">
                 <button class="btn btn-success btn-block">Sign up</button>
             </form>
             <?php 
@@ -60,6 +61,23 @@ require ('header.php');
         </div>
     </div>
 </div>
+
+<!-- recaptcha -->
+<script src="https://www.google.com/recaptcha/api.js?render=6Ld2Y7EZAAAAAJGYZGh5YwlaUE6wFY_bifPZ5FN2"></script>
+<script>
+    function onClick(e) {
+        e.preventDefault();
+        grecaptcha.ready(function() {
+            grecaptcha.execute('6Ld2Y7EZAAAAAJGYZGh5YwlaUE6wFY_bifPZ5FN2', {action: 'register'}).then(function(token) {
+                // Add your logic to submit to your backend server here.
+                var recaptchaResonse = document.getElementById('recaptchaResponse');
+                recaptchaResponse.value = token;
+
+                
+            });
+        });
+    }
+</script>
 
 <?php
 require_once('footer.php');

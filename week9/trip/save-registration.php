@@ -33,6 +33,21 @@ if($password != $confirm_password) {
   $ok = false;
 }
 
+//recaptcha validation
+$apiURL = "https://www.google.com/recaptcha/api/siteverify"; //from api document
+$secret = "6Ld2Y7EZAAAAAKklgwAeCc0kT8rMgQBS25LReBe5"; //from api console setting
+$response = $_POST['recaptchaResponse']; //from the hidden input on the register form
+
+//make api call and parse the result
+$apiResponse = file_get_contents($apiURL . "?secret=$secret&response=$response");
+$recaptchaResponse = json_decode($apiResponse);
+
+//determine if recaptcha shows bot or user
+if($recaptchaResponse->score >= 0.5) { //score can change to any score between 0.0 (bot) and 1.00 (user) you wanted
+  echo 'Are you human?';
+  $ok = false;
+}
+
 try {
   require ('db.php');
   $sql = "SELECT COUNT(*) AS count FROM users WHERE username = :username";
