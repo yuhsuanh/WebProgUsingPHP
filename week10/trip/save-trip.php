@@ -88,7 +88,10 @@ require_once ('header.php');
                 if(empty($trip_id)) {
                     // Set up the SQL INSERT command
                     $sqlCommand = "INSERT INTO trips (country, city, travel_type, hotel, days, fee, photo) VALUES (:country, :city, :travel_type, :hotel, :days, :fee, :photo)";
-                } else {
+                } else if (empty($photo)){
+                    // Set up the SQL UPDATE command
+                    $sqlCommand = "UPDATE trips SET country = :country, city = :city, travel_type = :travel_type, hotel = :hotel, days = :days, fee = :fee WHERE trip_id = :trip_id";
+                }  else {
                     // Set up the SQL UPDATE command
                     $sqlCommand = "UPDATE trips SET country = :country, city = :city, travel_type = :travel_type, hotel = :hotel, days = :days, fee = :fee, photo = :photo WHERE trip_id = :trip_id";
                 }
@@ -103,7 +106,9 @@ require_once ('header.php');
                 $cmd->bindParam(':hotel', $hotel, PDO::PARAM_STR, 30);
                 $cmd->bindParam(':days', $days, PDO::PARAM_INT);
                 $cmd->bindParam(':fee', $fee, PDO::PARAM_STR);
-                $cmd->bindParam(':photo', $final_name, PDO::PARAM_STR, 100);
+                if(!empty($photo)) {
+                    $cmd->bindParam(':photo', $final_name, PDO::PARAM_STR, 100);
+                }
                 if(!empty($trip_id)) {
                     $cmd->bindParam(':trip_id', $trip_id, PDO::PARAM_INT);
                 }
