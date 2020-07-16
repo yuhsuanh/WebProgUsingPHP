@@ -94,3 +94,12 @@ footer {
     margin-right: 10px;
     margin-left: 10px;
 }
+
+#posters {
+    width: max-content;
+    display: flex;
+}
+
+.moviePoster {
+    width: 200px;
+}

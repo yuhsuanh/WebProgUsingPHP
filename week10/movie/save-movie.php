@@ -83,7 +83,10 @@ require_once('header.php');
                     // Set up the SQL INSERT command
                     $sqlCommand = "INSERT INTO movies (title, year, length, url, photo) VALUES (:title, :year, :length, :url, :photo)";
                 }
-                else {
+                else if(empty($final_name)) {
+                    // Set up the SQL UPDATE command to modify the existing movie
+                    $sqlCommand = "UPDATE movies SET title = :title, year = :year, length = :length, url = :url WHERE movie_id = :movie_id";
+                } else {
                     // Set up the SQL UPDATE command to modify the existing movie
                     $sqlCommand = "UPDATE movies SET title = :title, year = :year, length = :length, url = :url, photo = :photo WHERE movie_id = :movie_id";
                 }
@@ -96,7 +99,9 @@ require_once('header.php');
                 $cmd->bindParam(':year', $year, PDO::PARAM_INT);
                 $cmd->bindParam(':length', $length, PDO::PARAM_INT);
                 $cmd->bindParam(':url', $url, PDO::PARAM_STR, 100);
-                $cmd->bindParam(':photo', $final_name, PDO::PARAM_STR, 100);
+                if(!empty($final_name)) {
+                    $cmd->bindParam(':photo', $final_name, PDO::PARAM_STR, 100);
+                }
                 if (!empty($movie_id)) {
                     $cmd->bindParam(':movie_id', $movie_id, PDO::PARAM_INT);
                 }
@@ -111,7 +116,7 @@ require_once('header.php');
                 //echo "<p><span class=\"nes-text is-success\">Movie Saved</span></p>";
 
                 //Executing successfully will redirect to movies.php page
-                //header('location:movies.php');
+                header('location:movies.php');
             } catch (PDOException $e) {
                     die('Could not connect:' . $e->getMessage());
             }

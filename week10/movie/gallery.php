@@ -19,12 +19,12 @@ $movies = $cmd->fetchAll();
 ?>
 
 <h1>Movie Posters</h1>
-<main class="container text_center">
+<main id="posters" class="container text_center">
     <?php
         foreach ($movies as $movie) {
             echo '<div>';
             echo '<a href="movie.php?movie_id=' . $movie['movie_id'] . '"  title="Movie Title">';
-            echo '<img src="images/' . $movie['photo'] . '" title="' . $movie['title'] . '">';
+            echo '<img class="moviePoster" src="images/' . $movie['photo'] . '" title="' . $movie['title'] . '">';
             echo '</a>';
             echo '</div>';
         }
