@@ -1,0 +1,236 @@
+/*
+///////////////////////// [FONT] /////////////////////////
+*/
+
+@font-face {
+  font-family: Poppins-Regular;
+  src: url('../../assets/fonts/poppins/Poppins-Regular.ttf'); 
+}
+
+@font-face {
+  font-family: VNI-HLThuphap;
+  src: url('../../assets/fonts/VNI-HLThuphap.ttf'); 
+}
+
+/*
+///////////////////////// [CSS] ///////////////////////// 
+*/
+
+body {
+	font-family: Poppins-Regular;
+}
+
+div.container_log {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	background-color: #f2f2f2;
+	/*background-color: black;*/
+}
+
+div.wrap_container {
+	width: 100%;
+	background-color: #fff;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+}
+
+#form_img {
+	background-image: url("alex-geerts-mGCCsm_3dVk-unsplash copy.jpg");
+	width: 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+#login_form {
+	width: 50%;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 250px 25px 250px 25px;
+}
+
+.form_title {
+	font-family: Poppins-Regular;
+  font-size: 20px;
+  color: #555555;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  width: 100%;
+  display: block;
+  padding-bottom: 30px;
+}
+
+.login_form_div {
+	width: 100%;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.form_input {
+	width: inherit;
+	height: 50px;
+	display: block;
+	background: transparent;
+	font-family: Poppins-Regular;
+	font-size: 18px;
+	line-height: 1.2;
+	color: #666666;
+	padding: 0 25px;
+}
+
+
+.login_form_button_div {
+	width: 100%;
+	display: inline-flex;
+}
+
+.login_form_button_L, .login_form_button_R {
+	width: 45%;
+	display: flex;
+	margin: auto;
+}
+
+
+
+
+
+.register_background {
+	background-image: url("soroush-karimi-IZ86s5eV4hA-unsplash.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.card_container {
+	width: 55%;
+	position: relative;
+	margin: 0 auto;
+	padding: 100px 0;
+}
+
+.card_content {
+	background: #fff;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-o-border-radius: 10px;
+	-ms-border-radius: 10px;
+	padding: 50px 80px;
+	color: #555555;
+}
+
+.register_form {
+	font-family: Poppins-Regular;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.text_center {
+	text-align: center;
+}
+
+.p-b-20 {
+	padding-bottom: 20px;
+}
+
+.m-t-70 {
+	margin-top: 70px;
+}
+
+.m-t-10 {
+	margin-top: 10px;
+}
+
+.m-t-20 {
+	margin-top: 20px;
+}
+
+.m-t-40 {
+	margin-top: 40px;
+}
+
+.m-b-20 {
+	margin-bottom: 20px;
+}
+
+.link {
+	font-weight: bold;
+	color: black;
+}
+
+.color_red {
+	color: red;
+}
+
+
+
+
+
+
+nav {
+	width: 100%;
+}
+
+li.nav-item {
+	margin: auto 2rem;
+}
+
+#menu_img {
+	background-image: url("tristan-pineda-LFGGCsj41Bc-unsplash.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+
+	height: 35rem;
+}
+
+.menu_quote {
+	font-family: VNI-HLThuphap;
+	background-color: black;
+}
+
+.font-size-2 {
+	font-size: 1.7rem;
+}
+
+.font-size-3 {
+	font-size: 3rem;
+}
+
+
+
+
+#listing, #listing th, #listing td {
+  border: 1px solid #99a1ad;
+}
+
+
+
+#trip_form {
+	margin: 0 10rem;
+	display: flex;
+}
+
+.form_label {
+	font-size: 18px;
+  text-align: center;
+  align-self: flex-end;
+}
+
+#tripImg img {
+	width: 203px;
+}
+
+#tripImg {
+	margin: 10px 10px;
+}
+
+.wd-200 {
+	width: 200px;
+}
