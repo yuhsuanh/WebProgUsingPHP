@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
+    <style>
+        body {
+            background-color: #DFDBE5;
+            background-image: url("data:image/svg+xml,%3Csvg width='44' height='12' viewBox='0 0 44 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 12v-2L0 0v10l4 2h16zm18 0l4-2V0L22 10v2h16zM20 0v8L4 0h16zm18 0L22 8V0h16z' fill='%23123326' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+
+<body>
+    <main style="text-align: center">
+        <h1>Enter your url to your api.php</h1>
+        <h4>Should look similar to: http://15.222.122.223/~xxxxxxx/comp1006/week10/api/api.php</h4>
+        <input type="text">
+        <button href="#0">Fetch my JSON, then transform it
+            into
+            HTML
+            on-the-fly using JS</button>
+        <br>
+    </main>
+    <br><br>
+    <article></article>
+
+    <script>
+        const content = document.querySelector('article');
+
+        function getjson() {
+            const input = document.querySelector('input');
+            const url = input.value;
+
+            const week10Index = url.indexOf('10/');
+            const imagePath = `${url.slice(0, week10Index + 3)}movie/images`;
+
+            fetch(url)
+                .then(res => res.json())
+                .then(data => {
+                    content.innerHTML = data
+                        .map(
+                            movie => `
+                        <a href="${movie.url}"
+                            class="fl w-50 w-25-l link overflow-hidden">
+                            <div role="img" aria-label="Primer movie" class="grow aspect-ratio--4x6 "
+                                 style="background: url(${
+                                movie.photo
+                                    ? `${imagePath}/${movie.photo}`
+                                    : `https://dummyimage.com/475x713?text=${movie.title.replace(
+                                        ' ',
+                                        '+'
+                                    )}`
+                                }) no-repeat center center; background-size: cover;">
+                            </div>
+                        </a>
+                `
+                        )
+                        .join('');
+                });
+        }
+
+        const btn = document.querySelector('button');
+        btn.addEventListener('click', getjson);
+    </script>
+</body>
+
+</html>
