@@ -29,9 +29,9 @@ WEEK  LESSON
 
 ## Purpose
 
-> A PHP/mySQL website that tracks game info via CRUD, search/sort, and users via register/login.
+> A PHP/mySQL website that manages trip info via CRUD, search/sort, and users via register/login.
 
-This website was developed in my COMP1006 Intro to Web Programming  course at Georgian College.  I was asked to create a website based on my interests, so I chose classic DOS games.  This website implements CRUD functionalities, register/login pages, securing pages via authentication, search and sort features and APIs.
+This website was developed in my COMP1006 Intro to Web Programming  course at Georgian College.  I was asked to create a website based on my interests, so I chose the trips management system.  This website implements CRUD functionalities, register/login pages, securing pages via authentication, search and sort features and APIs.
 
 
 ## Technologies Learned
