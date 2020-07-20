@@ -51,6 +51,9 @@ To launch this, you'll have to clone my Github files to your PHP server, change 
 
 Below are a series of videos, in reverse chronological order, where I'm learning about PHP/mySQL.  I attempt to explain what's happening from a coding perspective.
 
+[Quiz 12.1](https://www.loom.com/share/de3dba618bc94fa39bc093afab396032)
+Integrated a weather widget, created my own JSON API, and included reCAPTCHA v.3
+
 [Quiz 11.4](https://www.loom.com/share/9de951cda3394e5fafbeaec9f82ee6c4)
 Implemented a title search and a sort by table column
 
