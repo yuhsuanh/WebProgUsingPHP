@@ -35,7 +35,7 @@ if($password != $confirm_password) {
 
 //recaptcha validation
 $apiURL = "https://www.google.com/recaptcha/api/siteverify"; //from api document
-$secret = "6Ld2Y7EZAAAAAKklgwAeCc0kT8rMgQBS25LReBe5"; //from api console setting
+$secret = "input your key here"; //from api console setting
 $response = $_POST['recaptchaResponse']; //from the hidden input on the register form
 
 //make api call and parse the result
