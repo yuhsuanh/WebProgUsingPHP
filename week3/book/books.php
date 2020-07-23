@@ -21,8 +21,6 @@
     <?php
 
     //Connection to DB
-    //LAMP
-    //$conn = new PDO('mysql:host=172.31.22.43;dbname=Yu200443723', 'Yu200443723', '0KBPSTzFsH');
     //LOCAL
     $conn = new PDO('mysql:host=127.0.0.1;dbname=Yu200443723', 'Yu200443723', '0KBPSTzFsH');
 
